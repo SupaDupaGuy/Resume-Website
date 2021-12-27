@@ -1,0 +1,52 @@
+body {
+    background-color: #120C43;
+}
+
+nav {
+    background-color: #120C43;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 25px;
+    color: #78808d;
+    font-family: 'Robot Mono', monospace;
+}
+
+.subNav {
+    display: flex;
+    width: auto;
+    position: absolute;
+    right: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navDiv {
+    display: flex;
+    width: auto;
+    margin-right: 40px;
+}
+
+.navLink {
+    font-size: 17px;
+    color: #78808d;
+    font-family: 'Robot Mono', monospace;
+    position: relative;
+    top: 13px;
+}
+
+.navIcon {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 24px;
+    margin-right: 10px;
+}
+
+#logoIcon {
+    width: 75px;
+    height: auto;
+}
