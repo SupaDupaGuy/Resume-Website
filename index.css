@@ -1,5 +1,6 @@
 body {
     background-color: #120C43;
+    position: relative;
 }
 
 nav {
@@ -11,6 +12,18 @@ nav {
     font-size: 25px;
     color: #78808d;
     font-family: 'Robot Mono', monospace;
+}
+
+section {
+    position: absolute;
+}
+
+.mainContent {
+    top: 250px;
+    left: 100px;
+    font-size: 17.5px;
+    font-family: 'Robot Mono', monospace;
+    color: #dbe540;
 }
 
 .subNav {
