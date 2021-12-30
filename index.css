@@ -101,6 +101,16 @@ a {
     animation-fill-mode: forwards;
 }
 
+/*    ID's    */
+
+#bubble1:hover {
+    animation-duration: 1s;
+    animation-name: bubbleHoverAnim;
+    animation-fill-mode: forwards;
+}
+
+/* Animations */
+
 @keyframes iconAnim{
     0%{
         transform: translate(0px, 0px);
@@ -113,4 +123,19 @@ a {
 @keyframes reverseIcon {
     from {transform: translate(0px, -5px);}
     to {transform: translate(0px, 0px);}
+}
+
+@keyframes bubbleIdleAnim {
+    from {transform: translate(0px, 0px);}
+    to {transform: translate(0px, -10px);}
+}
+
+@keyframes bubbleHoverAnim {
+    from {transform: scale(1, 1);}
+    to {transform: scale(1.2, 1.2);}
+}
+
+@keyframes reverseBubbleHoverAnim {
+    from {transform: scale(1.2, 1.2);}
+    to {transform: scale(1, 1);}
 }
