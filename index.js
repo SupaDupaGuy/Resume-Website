@@ -30,14 +30,22 @@ function bubbleHoverAnim(idName){
 
 function clicked(idName){
     bubble = document.getElementById(idName);
-    bubble.onmouseout = (event) => {}
+    bubble.onmouseout = (event) => {};
+    bubble.onmouseenter = (event) => {};
 
     bubble.style.animationDuration = '1.5s';
     bubble.style.animationFillMode = 'forwards';
     bubble.style.animationName = "bubblePop";
+
+    //time until the bubble regrows
     setTimeout(() => {
+        //grow bubble
+        bubble.style.animationFillMode = 'forwards';
+        bubble.style.animationDuration = "1s";
+        bubble.style.animationName = "growBubble";
         bubble.onmouseout = (event) => {reverseBubbleAnim('bubble1');};
         console.log('Mickey mouse clubhouse.');
+        bubble.onmouseenter = (event) => {bubbleHoverAnim('bubble1');};
     }, 5000);
     console.log(bubble.onmouseout);
 
