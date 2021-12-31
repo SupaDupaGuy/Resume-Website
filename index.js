@@ -1,5 +1,5 @@
 var runningFunc = false;
-
+var bubbleQueue = [];
 function reverseAnim(idName){
     element = document.getElementById(idName);
     element.style.animationDuration = "1s"
@@ -36,16 +36,20 @@ function clicked(idName){
     bubble.style.animationDuration = '1.5s';
     bubble.style.animationFillMode = 'forwards';
     bubble.style.animationName = "bubblePop";
+    //Add bubble to queue to regrow
+    bubbleQueue.push(idName);
 
     //time until the bubble regrows
     setTimeout(() => {
         //grow bubble
-        bubble.style.animationFillMode = 'forwards';
-        bubble.style.animationDuration = "1s";
-        bubble.style.animationName = "growBubble";
-        bubble.onmouseout = (event) => {reverseBubbleAnim('bubble1');};
+        let newBubbleId = bubbleQueue.shift();
+        let newBubble = document.getElementById(newBubbleId);
+        newBubble.style.animationFillMode = 'forwards';
+        newBubble.style.animationDuration = "1s";
+        newBubble.style.animationName = "growBubble";
+        newBubble.onmouseout = (event) => {reverseBubbleAnim(newBubbleId);};
         console.log('Mickey mouse clubhouse.');
-        bubble.onmouseenter = (event) => {bubbleHoverAnim('bubble1');};
+        newBubble.onmouseenter = (event) => {bubbleHoverAnim(newBubbleId);};
     }, 5000);
     console.log(bubble.onmouseout);
 
