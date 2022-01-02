@@ -101,6 +101,14 @@ a {
     animation-fill-mode: forwards;
 }
 
+.bubble {
+    animation-name: bubbleIdleAnim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 /*    ID's    */
 
 #bubble1:hover {
@@ -112,12 +120,8 @@ a {
 /* Animations */
 
 @keyframes iconAnim{
-    0%{
-        transform: translate(0px, 0px);
-    }
-    100%{
-        transform: translate(0px, -5px);
-    }
+    0% {transform: translate(0px, 0px);}
+    100% {transform: translate(0px, -5px);}
 }
 
 @keyframes reverseIcon {
@@ -156,14 +160,12 @@ a {
 }
 
 @keyframes growBubble {
-    0% {
-        opacity: 100%;
-        transform: scale(0, 0);
-    }
-    95% {
-        transform: scale(1.2, 1.2);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
+    0% {opacity: 100%; transform: scale(0, 0);}
+    95% {transform: scale(1.2, 1.2);}
+    100% {transform: scale(1, 1);}
+}
+
+@keyframes bubbleIdleAnim {
+    from{transform: translateY(0px);}
+    to {transform: translateY(20px);}
 }
