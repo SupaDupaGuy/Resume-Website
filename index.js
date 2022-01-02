@@ -1,13 +1,13 @@
 var runningFunc = false;
 var bubbleQueue = [];
 function reverseAnim(idName){
-    element = document.getElementById(idName);
+    let element = document.getElementById(idName);
     element.style.animationDuration = "1s"
     element.style.animationName = "reverseIcon";
 }
 
 function hoverAnim(idName){
-    element = document.getElementById(idName);
+    let element = document.getElementById(idName);
     element.style.animationDuration = "1s";
     element.style.animationName = "iconAnim";
 }
@@ -16,14 +16,14 @@ function hoverAnim(idName){
 function reverseBubbleAnim(idName){
     console.log('Reverse Hover Bubble');
     console.log(runningFunc);
-    element = document.getElementById(idName);
+    let element = document.getElementById(idName);
     element.style.animationDuration = "1s";
     element.style.animationName = "reverseBubbleHoverAnim";
 }
 
 function bubbleHoverAnim(idName){
     console.log('Hover bubble');
-    element = document.getElementById(idName);
+    let element = document.getElementById(idName);
     element.style.animationDuration = "1s";
     element.style.animationName = "bubbleHoverAnim";
 }
