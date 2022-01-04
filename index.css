@@ -4,7 +4,7 @@ body {
 }
 
 nav {
-    background-color: #120C43;
+    background-color: rgb(18, 12, 67, 30%);
     position: fixed;
     display: flex;
     width: 100%;
@@ -12,6 +12,11 @@ nav {
     font-size: 25px;
     color: #78808d;
     font-family: 'Robot Mono', monospace;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 8%);
+    top: 0px;
+    left: 0px;
+    z-index: 5;
 }
 
 section {
@@ -115,6 +120,12 @@ a {
     animation-duration: 1s;
     animation-name: bubbleHoverAnim;
     animation-fill-mode: forwards;
+}
+
+#navBackground {
+    z-index: -1;
+    position: absolute;
+
 }
 
 /* Animations */
