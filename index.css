@@ -123,6 +123,38 @@ a {
     animation-direction: alternate;
 }
 
+.belowMain {
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 99.2vh;
+    margin: 0px 0px;
+}
+
+.hoverAnim {
+    display: inline-block;
+    position: relative;
+    color: #dbe540;
+}
+
+.hoverAnim:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #dbe540;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hoverAnim:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
 /*    ID's    */
 
 #bubble1:hover {
