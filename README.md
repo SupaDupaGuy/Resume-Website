@@ -1,11 +1,11 @@
-#Resume Project
+# Resume Project
 
 Created: December 3, 2021
 
-#Versions
+# Versions
 
 Found Below
 
-##V1.0
+## V1.0
 Features
 - Nothing
